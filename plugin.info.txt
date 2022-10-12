@@ -1,0 +1,7 @@
+base   bookmark2wiki
+author dodotori @ dokuwiki forum
+email  dodotori@localhost
+date   2022-10-12
+name   bookmark2wiki plugin
+desc   to bookmark url on a targeted namespace
+url    https://github.com/edwardcodelab/bookmark2wiki
