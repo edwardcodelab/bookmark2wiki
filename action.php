@@ -16,7 +16,7 @@
         //                 Change the window.open statement to reflect the location of the bookmark2wiki.php script.
         //                 Drag bookmarklet to your toolbar.
         //  BOOKMARKLET : 
-	//  javascript:Q=document.selection?document.selection.createRange().text:document.getSelection(); void(window.open('https://myserver/doku.php?do-bookmark2wiki&te='+escape(Q)+'&ur='+ escape(location.href)+'&ti='+escape(document.title),'dokuwikiadd','scrollbars=yes,resizable=yes,toolbars=yes,width=200,height=100,left=200,top=200,status=yes'));
+	//  javascript:Q=document.selection?document.selection.createRange().text:document.getSelection(); void(window.open('https://myserver/doku.php?do=bookmark2wiki&te='+escape(Q)+'&ur='+ escape(location.href)+'&ti='+escape(document.title),'dokuwikiadd','scrollbars=yes,resizable=yes,toolbars=yes,width=200,height=100,left=200,top=200,status=yes'));
  
 
 
