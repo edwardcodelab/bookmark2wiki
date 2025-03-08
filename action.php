@@ -53,6 +53,7 @@ class action_plugin_bookmark2wiki extends \dokuwiki\Extension\ActionPlugin
       	// SETUP SECTION
 	$namespace="new_bookmarks";  // default namespace for bookmark 
 	// POST TO WIKI
+	// POST TO WIKI
 	$timestamp = date("Y:m:d:H:i:s"); //timestamp
 	$wikitext=$_GET['te'];  // things to log : Selected text
 	$url=$_GET['ur'];       // things to log : URL
@@ -65,10 +66,10 @@ class action_plugin_bookmark2wiki extends \dokuwiki\Extension\ActionPlugin
 	$targeturl = DOKU_BASE."doku.php?id=".$namespace."&do=edit";    
 	      echo '<script>';
           echo 'function loadFunc(){';
-          echo 'if(document.getElementById("top").contentWindow.document.getElementsByTagName("textarea")[0].innerHTML.length==0){document.getElementById("top").contentWindow.document.getElementsByTagName("textarea")[0].innerHTML = " ====== New Bookmarks ======"};';
-          echo 'temp = document.getElementById("top").contentWindow.document.getElementsByTagName("textarea")[0].innerHTML.split(/\n/);';
+          echo 'if(document.getElementById("top").contentWindow.document.getElementsByName("wikitext")[0].innerHTML.length==0){document.getElementById("top").contentWindow.document.getElementsByName("wikitext")[0].innerHTML = " ====== New Bookmarks ======"};';
+          echo 'temp = document.getElementById("top").contentWindow.document.getElementsByName("wikitext")[0].innerHTML.split(/\n/);';
           echo 'temp[1] = "    * [['.$url.'|'.$title.']] \\\\\\\\ '.$wikitext.' -- '.$timestamp.'\r\n" + temp[1];';
-          echo 'document.getElementById("top").contentWindow.document.getElementsByTagName("textarea")[0].innerHTML = temp.join("\n");';
+          echo 'document.getElementById("top").contentWindow.document.getElementsByName("wikitext")[0].innerHTML = temp.join("\n");';
           echo '};';
           echo '</script>';
           echo '<iframe src="'.$targeturl.'" id="top" width="100%" height= "1000 px" onload="loadFunc()"></iframe>';        
